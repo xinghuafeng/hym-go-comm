@@ -1,0 +1,15 @@
+syntax = "proto3";    // 指定 proto 版本
+package proto;
+message TestRequerst{
+  int32  id=1;
+}
+message  TestRespone{
+  string data=1;
+}
+
+
+service TestService {
+rpc Call(TestRequerst) returns(TestRespone) {}
+
+}
+
